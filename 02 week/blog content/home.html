@@ -15,8 +15,10 @@
  
   
     .nav{
-        display:inline-flex-box;
-        text-align: right;
+
+        display:flex-box;
+        justify-content: center;
+        /*text-align: right;*/
         padding:10px ;
         font-size: 20px;
         text-align: center;
@@ -61,50 +63,45 @@
 
         text-align: center;
         margin: 5px;
-       
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
 
-    .first_entry{
+    .box{
 
         background-color: lightgrey;
         width: 300px;
         margin: 20px;
         display:inline-block;
-        padding: 0 0 10px 0;
+        padding: 0 0 20px 0;
         font-family: fantasy;
-        
-        
         
         
     }
 
-    .second_entry {
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        z-index: 99;
+        font-size: 18px;
+        background-color: grey;
+        color: black;
+        cursor: pointer;
+        padding: 10px;
 
-        background-color: lightgrey;
-        width: 300px;
-        margin: 20px;
-        display: inline-block;
-        padding: 0px 0 10px 0px;
-        font-family: fantasy;
-        
-    }
-    
-
-    .third_entry{
-
-        background-color: lightgrey;
-        width: 300px;
-        margin: 20px;
-        display: inline-block;
-        padding: 0 0 10px 0;
-        font-family: fantasy;
-    }
-    
+}
 
 
 </style>
   </head>
   <body>
+
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
      <div class=header>
 
         <img class=logo src="/02 week/blog content/dearbear.png" alt="Dear & Bear" height=100px style="float:left; margin-right: 30px; margin-top: 30px; border:5px solid #1abc9c"/>
@@ -129,7 +126,7 @@
 
     <div class=container>
 
-        <div class=first_entry>
+        <div class=box>
             
 
                 <div class=post_1>
@@ -143,7 +140,7 @@
         </div>
 
 
-         <div class=second_entry>
+         <div class=box>
 
             <div class=post_2>
 
@@ -155,7 +152,7 @@
             <h3>Bixad. Lacul Sfânta Ana. Urme de urși.</h3>
          </div>
 
-         <div class=third_entry>
+         <div class=box>
 
             <div class=post_3>
 
@@ -168,6 +165,31 @@
         </div>
 
     </div>
+
+   
+
+
+    <script>
+     
+        var mybutton = document.getElementById("myBtn");
+        
+        
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+    
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        </script>
     
   </body>
 </html>
