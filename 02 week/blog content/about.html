@@ -9,24 +9,22 @@
         text-align: center;
         background: #FAEBD7;
         color: white;
-       
-        
-        
+
     }
  
 
     .nav{
-        display:inline-flex-box;
-        text-align: right;
+        display:flex-box;
+        justify-content: center;
         padding-right:10px;
         font-size: 20px;
         text-align: center;
         text-shadow: beige;
-        
-        
 
     }
+
     #menu li{
+
         list-style:none;
         background-color:grey;
         color: black;
@@ -34,6 +32,20 @@
         padding-right: 60px;
         background: transparent;
 
+    }
+
+    .logo{
+
+        float:left; 
+        margin-right: 30px; 
+        margin-top: 30px; 
+        border:5px solid #1abc9c;
+
+    }
+
+    ul li a{
+
+        color:black;
     }
 
     .titlu{
@@ -70,11 +82,7 @@
         align-items: left;
         justify-content: left;
     }
-   /* .pic_aboutus{
-
-        flex-basis: 40%;
-    }
-    */
+  
     .subtitlu{
 
         font-size: 20px;
@@ -88,7 +96,7 @@
         font-size: 17px;
         
     }
-    
+
     #myBtn {
         display: none;
         position: fixed;
@@ -111,16 +119,16 @@
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
      <div class=header>
 
-        <img src="/02 week/blog content/dearbear.png" alt="Dear & Bear" height=100px style="float:left; margin-right: 30px; margin-top: 30px; border:5px solid #1abc9c"/>
+        <img src="/02 week/blog content/dearbear.png" class=logo alt="Dear & Bear" height=100px/>
 
         <div class=nav>
 
          <ul id=menu>
 
-            <li><a href="./home.html" style="color:black">Home</a></li>
-            <li><a href="./about.html" style="color:black">About</a></li>
-            <li><a href="./blog.html" style="color:black">Blog</a></li>
-            <li><a href="./contact.html" style="color:black">Contact</a></li>
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./contact.html">Contact</a></li>
          </ul>
          </div>
     </div>
