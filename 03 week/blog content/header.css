@@ -1,0 +1,38 @@
+.header{
+    padding: 5px;
+    text-align: center;
+    background: #FAEBD7;
+    color: white;
+
+
+}
+.nav{
+
+    display:flex-box;
+    justify-content: center;
+    padding:10px ;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: beige;
+
+}
+
+#menu li{
+
+    list-style:none;
+    background-color:grey;
+    color: black;
+    display:inline-block;
+    padding-right: 60px;
+    background: transparent;
+    
+}
+
+.logo{
+
+    float:left; 
+    margin-right: 30px; 
+    margin-top: 30px; 
+    border:5px solid #1abc9c;
+
+}
