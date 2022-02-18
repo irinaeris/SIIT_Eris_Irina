@@ -2,38 +2,13 @@
 <html>
   <head>
     <title>Dear and Bear</title>
+    <link rel="stylesheet" href="/03 week/blog content/header.css">
 <style>
 
-    .header{
-        padding: 5px;
-        text-align: center;
-        background: #FAEBD7;
-        color: white;
-       
-        
-        
-    }
- 
 
-    .nav{
-        display:inline-flex-box;
-        text-align: right;
-        padding-right:10px;
-        font-size: 20px;
-        text-align: center;
-        text-shadow: beige;
-        
-        
+    ul li a {
 
-    }
-    #menu li{
-        list-style:none;
-        background-color:grey;
-        color: black;
-        display:inline-block;
-        padding-right: 60px;
-        background: transparent;
-
+        color:black;
     }
 
     .titlu{
@@ -43,8 +18,6 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 25% 45%;
-        /*border: 20px solid transparent;*/
-        /*border-style: solid;*/
         padding-top: 10px;
         padding-bottom: 130px;
         margin-top: 20px;
@@ -70,11 +43,7 @@
         align-items: left;
         justify-content: left;
     }
-   /* .pic_aboutus{
-
-        flex-basis: 40%;
-    }
-    */
+  
     .subtitlu{
 
         font-size: 20px;
@@ -89,22 +58,37 @@
         
     }
 
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        z-index: 99;
+        font-size: 18px;
+        background-color: grey;
+        color: black;
+        cursor: pointer;
+        padding: 10px;
+
+}
+
 
 </style>
   </head>
   <body>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
      <div class=header>
 
-        <img src="/02 week/blog content/dearbear.png" alt="Dear & Bear" height=100px style="float:left; margin-right: 30px; margin-top: 30px; border:5px solid #1abc9c"/>
+        <img src="/02 week/blog content/dearbear.png" class=logo alt="Dear & Bear" height=100px/>
 
         <div class=nav>
 
          <ul id=menu>
 
-            <li><a href="./home.html" style="color:black">Home</a></li>
-            <li><a href="./about.html" style="color:black">About</a></li>
-            <li><a href="./blog.html" style="color:black">Blog</a></li>
-            <li><a href="./contact.html" style="color:black">Contact</a></li>
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./contact.html">Contact</a></li>
          </ul>
          </div>
     </div>
@@ -143,6 +127,27 @@
          </div>
     </div>
 
+    <script>
+     
+        var mybutton = document.getElementById("myBtn");
+        
+        
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+    
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        </script>
     
   </body>
 </html>
