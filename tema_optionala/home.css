@@ -1,0 +1,29 @@
+.navlist{
+
+   width:100px;
+}
+
+.navlist a {
+
+    box-sizing: border-box;
+    color: black; 
+    display: block; 
+    padding: 5px; 
+    text-decoration: none; 
+
+}
+
+
+
+.content h2{
+
+    color:black; 
+    padding-top:40px;
+}
+
+
+.content h6 {
+
+    color:black; 
+    padding-top:40px;
+}
