@@ -74,7 +74,7 @@ console.log(max)
 
 
 
-
+/*
 var arr = [1, 2, 3, 4, 56, 232, 45, 12, 4, 6, 8, 8,8, 1, 1];
 const countNumber=(arr, value) => {
 
@@ -91,5 +91,34 @@ const countNumber=(arr, value) => {
 }
 
 console.log(countNumber(arr, 8));
+*/
+
+//6. Using nested control structures (doua for + if) for generate the following pattern
+
+  //  0 1 0 1
+
+  //  1 0 1 0
+
+  //  0 1 0 1
+
+  // 1 0 1 0
 
 
+  var x = [
+    [0,1,0,1],
+    [1,0,1,0],
+    [0,1,0,1],
+    [1,0,1,0],
+];
+var result;
+
+for (var i = 0; i < x.length; i++) {
+
+    var result = "";
+
+    for (var j = 0; j < x[i].length; j++) {
+        result += x[i][j] + " ";
+    }
+
+    console.log(result);
+} 
