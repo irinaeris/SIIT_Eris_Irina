@@ -104,6 +104,7 @@ console.log(countNumber(arr, 8));
   // 1 0 1 0
 
 
+  /*
   var x = [
     [0,1,0,1],
     [1,0,1,0],
@@ -122,3 +123,4 @@ for (var i = 0; i < x.length; i++) {
 
     console.log(result);
 } 
+*/
