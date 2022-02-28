@@ -1,42 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Comments box</title>
+  <head>
+    <title>Comments box</title>
 
-<style>
-
-    #allComments{
-
+    <style>
+      #allComments {
         background-color: lightblue;
-    }
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <input type="text" id="text_id" value="tralalal" />
 
-</style>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    
-
-    <div class="container">  
-
-        <input type="text" id="text_id" value="tralalal">
-
-        <button type="button" onclick="eventButton()">Add</button>
-  
-     
+      <button type="button" onclick="eventButton()">Add</button>
     </div>
 
     <div class="section">
-
-        <div id="images"></div>
-        <div id="email"></div>
-        <div id="comments"></div>
-        <div id="deleteButton"></div>
-        
-
+      <div id="images"></div>
+      <div id="email"></div>
+      <div id="comments"></div>
+      <div id="deleteButton"></div>
     </div>
 
-      
     <script src="/05_week/function.js"></script>
-</body>
+  </body>
 </html>
