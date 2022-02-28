@@ -55,16 +55,24 @@ function insertText(){
 function eventButton(){
 
     var txt = document.getElementById("text_id").value;
-    document.getElementById("allComments").innerHTML = txt;
+    document.getElementById("comments").innerHTML = txt;
   
-    function myFunction() {
-        var x = document.createElement("IMG");
-        x.setAttribute("src", "pic1.png");
-        x.setAttribute("width", "304");
-        x.setAttribute("height", "228");
-        x.setAttribute("alt", "Image");
-        document.body.appendChild(x);
-      }
-    }
+    
+        var img = document.createElement("IMG");
+        img.setAttribute("src", "pic1.png");
+        img.setAttribute("width", "80");
+        img.setAttribute("height", "50");
+        img.setAttribute("alt", "Image");
+        img.style.borderRadius="25px";
+        document.querySelector("#images").appendChild(img);
+  
+        var email = document.createElement("span");
+        email.innerHTML="test@email.com";
+        document.querySelector("#email").appendChild(email);
 
+        var deleteButton = document.createElement("button");
+        deleteButton.innerHTML="Delete";
+        document.querySelector("#deleteButton").appendChild(deleteButton);
+      }
+   
 
