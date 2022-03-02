@@ -1,4 +1,3 @@
-
 /*
 //create the input field
 function createInput(){
@@ -52,27 +51,40 @@ function insertText(){
 
 }
 */
-function eventButton(){
 
-    var txt = document.getElementById("text_id").value;
-    document.getElementById("comments").innerHTML = txt;
+var toDoInput = document.getElementById("text_id");
+var todoButton = document.getElementById("second_button");
+/*
+var commentSection = document.createElement("ul");
+document.body.appendChild(commentSection);
+*/
+function eventButton() {
+  var commentSection = document.createElement("ul");
+  document.body.appendChild(commentSection);
+/*
+  var txt = document.createElement("li");
   
-    
-        var img = document.createElement("IMG");
-        img.setAttribute("src", "pic1.png");
-        img.setAttribute("width", "80");
-        img.setAttribute("height", "50");
-        img.setAttribute("alt", "Image");
-        img.style.borderRadius="25px";
-        document.querySelector("#images").appendChild(img);
-  
-        var email = document.createElement("span");
-        email.innerHTML="test@email.com";
-        document.querySelector("#email").appendChild(email);
+  txt.innerHTML = toDoInput.value;
+  commentSection.appendChild(txt);
+*/
+  var img = document.createElement("IMG");
+  img.setAttribute("src", "pic1.png");
+  img.setAttribute("width", "80");
+  img.setAttribute("height", "60");
+  img.setAttribute("alt", "Image");
+  img.style.borderRadius = "25px";
+  img.style.float = "left";
+  commentSection.appendChild(img);
 
-        var deleteButton = document.createElement("button");
-        deleteButton.innerHTML="Delete";
-        document.querySelector("#deleteButton").appendChild(deleteButton);
-      }
-   
+  var email = document.createElement("span");
+  email.innerHTML = "test@email.com";
+  commentSection.appendChild(email);
 
+  var txt = document.createElement("li");
+  txt.innerHTML = toDoInput.value;
+  commentSection.appendChild(txt);
+
+  var deleteButton = document.createElement("button");
+  deleteButton.innerHTML = "Delete";
+  commentSection.appendChild(deleteButton);
+}
