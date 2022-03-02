@@ -55,9 +55,8 @@ function insertText(){
 var toDoInput = document.getElementById("text_id");
 var todoButton = document.getElementById("second_button");
 
-
-
 function eventButton() {
+  //var a =[];
   var commentSection = document.createElement("ul");
   document.body.appendChild(commentSection);
 
@@ -76,20 +75,16 @@ function eventButton() {
 
   var txt = document.createElement("li");
   txt.innerHTML = toDoInput.value;
+  //a= toDoInput.value;
+  //console.log(array[a]);
   commentSection.appendChild(txt);
 
   var deleteButton = document.createElement("button");
   deleteButton.innerHTML = "Delete";
   commentSection.appendChild(deleteButton);
 
-
-  deleteButton.onclick = function(event){
-    commentSection.removeChild(event.target)
-
-
+  deleteButton.onclick = function (event) {
+    commentSection.removeChild(event.target);
   }
 
 }
-
-
-
