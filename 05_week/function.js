@@ -54,19 +54,13 @@ function insertText(){
 
 var toDoInput = document.getElementById("text_id");
 var todoButton = document.getElementById("second_button");
-/*
-var commentSection = document.createElement("ul");
-document.body.appendChild(commentSection);
-*/
+
+
+
 function eventButton() {
   var commentSection = document.createElement("ul");
   document.body.appendChild(commentSection);
-/*
-  var txt = document.createElement("li");
-  
-  txt.innerHTML = toDoInput.value;
-  commentSection.appendChild(txt);
-*/
+
   var img = document.createElement("IMG");
   img.setAttribute("src", "pic1.png");
   img.setAttribute("width", "80");
@@ -87,4 +81,15 @@ function eventButton() {
   var deleteButton = document.createElement("button");
   deleteButton.innerHTML = "Delete";
   commentSection.appendChild(deleteButton);
+
+
+  deleteButton.onclick = function(event){
+    commentSection.removeChild(event.target)
+
+
+  }
+
 }
+
+
+
