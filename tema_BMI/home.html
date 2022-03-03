@@ -3,20 +3,35 @@
   <head>
     <title>BMI</title>
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/tema_BMI/style.css" />
   </head>
 
   <body>
     <div class="container">
+      <p>Name</p>
+      <input type="text" class="input_3" />
 
-    <p>Height in meters:</p>
-      <input name = "your height" type="text" id="text_id1"/>
-      <p>Weight in kg:</p>
-      <input name = "your weight" type="text" id="text_id2"/>
-     <br>
-      <button type="button" id ="second_button" onclick="eventButton()">Calculate</button>
+      <div>
+        <p>Gender</p>
+        <input type="radio" id="gender1" name="gender" value="male" />
+        <label for="male">Male</label><br />
+
+        <input type="radio" id="gender2" name="gender" value="female" />
+        <label for="female">Female</label>
+      </div>
+      <p>Height in meters:</p>
+      <input type="text" class="input_1" />
+
+      <p>Weight in kilograms:</p>
+      <input type="text" class="input_2" />
+
+      <br />
+      <button type="button" class="calculate" onclick="calculateButton()">
+        Calculate
+      </button>
     </div>
 
-    <script src="/tema_BMI/functii.js""></script>
+    <p class="finalResult"></p>
+    <script src="/tema_BMI/functii.js"></script>
   </body>
 </html>
