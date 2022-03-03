@@ -27,7 +27,7 @@ for (var i = 0; i < commentList.length; i++) {
   ulHTML.appendChild(deleteButton);
 
   deleteButton.onclick = function (event) {
-    ulHTML.removeChild(event.target);
+    ulHTML.parentElement.removeChild(ulHTML);
   };
 }
 
@@ -60,6 +60,6 @@ function eventButton() {
   commentSection.appendChild(deleteButton);
 
   deleteButton.onclick = function (event) {
-    commentSection.removeChild(event.target);
+    commentSection.parentElement.removeChild(commentSection);
   };
 }
