@@ -35,13 +35,10 @@ for (var i = 0; i < obstacol.length; i++) {
   randomTop = getRandomNumber();
   randomLeft = getRandomNumber();
 
- 
   obstacolList.style.top = randomTop + "px";
-  console.log(obstacolList)
-  obstacolList.style.left = randomLeft + "px";
-  console.log(obstacolList)
-}
 
+  obstacolList.style.left = randomLeft + "px";
+}
 
 function getRandomNumber() {
   return parseInt(Math.random() * 370);
