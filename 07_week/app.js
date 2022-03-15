@@ -53,11 +53,12 @@ function myStop(){
 }
 
 resetButton.addEventListener("click", function(){
-    myStop();
+
     hourHtml.innerHTML="00";
     minuteHtml.innerHTML="00";
     secundeHtml.innerHTML="00";
-
+    
 })
+
 
 
