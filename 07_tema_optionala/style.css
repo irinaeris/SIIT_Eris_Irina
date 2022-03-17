@@ -1,0 +1,45 @@
+
+
+h1{
+
+   text-align: center;
+    font-size: 35px;
+  
+}
+.playerCount, .pcCount{
+
+
+    font-size: 30px;
+    margin-left: 70px;
+
+}
+
+h2{
+
+    margin-left: 50px;
+}
+
+.move{
+
+    text-align: center;
+    font-size: 25px;
+}
+
+.gameOptions{
+
+    display: flex;
+    width: 50vw;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    margin-left:400px;
+
+}
+
+.rock, .paper, .scissor{
+    padding: 20px;
+    width: 100px;
+    border-radius: 10px;
+    background: grey;
+    cursor: pointer;
+
+}
