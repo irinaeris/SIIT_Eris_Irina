@@ -14,22 +14,16 @@ function addZero(value) {
 }
 
 let startBtn = document.getElementById("startButton");
-let resetButton=document.getElementById("resetButton");
+let resetButton = document.getElementById("resetButton");
 let saveButton = document.getElementById("saveButton");
-
 
 let secunde = 0;
 let minute = 0;
 let hour = 0;
 let intervalId;
 
-
-
-
 startBtn.addEventListener("click", function () {
-   
   intervalId = setInterval(function () {
-
     secunde = secunde + 1;
 
     if (secunde == 60) {
@@ -46,37 +40,28 @@ startBtn.addEventListener("click", function () {
     minuteHtml.innerHTML = addZero(minute);
     hourHtml.innerHTML = addZero(hour);
   }, 1000);
-
 });
 
-  function myStop(){
-    clearInterval(intervalId);
-    
+function myStop() {
+  clearInterval(intervalId);
 }
 
+resetButton.addEventListener("click", function () {
+  hourHtml.innerHTML = "00";
+  minuteHtml.innerHTML = "00";
+  secundeHtml.innerHTML = "00";
+});
 
-resetButton.addEventListener("click", function(){
+saveButton.onclick = function () {
+  const valuesHour = document.getElementById("hour");
+  const clone = valuesHour.cloneNode(true);
+  document.body.appendChild(clone);
 
-    hourHtml.innerHTML="00";
-    minuteHtml.innerHTML="00";
-    secundeHtml.innerHTML="00";
-    
-})
+  const valuesMinutes = document.getElementById("minute");
+  const clone2 = valuesMinutes.cloneNode(true);
+  document.body.appendChild(clone2);
 
-  saveButton.onclick= function (){
-
-    const valuesHour = document.getElementById("hour");
-    const clone = valuesHour.cloneNode(true)
-    document.body.appendChild(clone)
-
-    const  valuesMinutes = document.getElementById("minute")
-    const clone2= valuesMinutes.cloneNode(true)
-    document.body.appendChild(clone2)
-
-    const  valuesSeconds = document.getElementById("secunde")
-    const clone3=valuesSeconds.cloneNode(true)
-    document.body.appendChild(clone3)
-  }
-
-
-
+  const valuesSeconds = document.getElementById("secunde");
+  const clone3 = valuesSeconds.cloneNode(true);
+  document.body.appendChild(clone3);
+};
