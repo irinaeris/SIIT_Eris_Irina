@@ -7,16 +7,19 @@
 function getDeleteButton(todoId) {
     // am adaugat un <button>delete</button in <li>
     const deleteButton = document.createElement("button")
-    deleteButton.innerHTML = "delete"
+   deleteButton.innerHTML = "delete"
+
+   
+
   
-    deleteButton.addEventListener("click", function () {
+    /*deleteButton.addEventListener("click", function () {
       // requestul la server ca sa facem stergerea
       fetch(`${baseUrl}/todos/${todoId}`, {
         method: "DELETE",
       }).then(function () {
         location.reload();
       })
-    })
+    })*/
   
     return deleteButton;
   }

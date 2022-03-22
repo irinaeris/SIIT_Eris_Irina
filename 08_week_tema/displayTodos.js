@@ -12,7 +12,10 @@ getTodos().then(function (todos) { // cod async
       const itemHTML = createTodo(todos[i].name, todos[i].id);
   
       const deleteBtn = getDeleteButton(todos[i].id)
-      itemHTML.appendChild(deleteBtn);
+     itemHTML.appendChild(deleteBtn);
+
+     const updateBtn = updateTodo(todos[i].id)
+     itemHTML.appendChild(updateBtn)
   
       ulHTML.appendChild(itemHTML);
     }
