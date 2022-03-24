@@ -5,5 +5,7 @@ function updateTodo(todoId){
     updateCheckbox.type = 'checkbox'
 
     return updateCheckbox;
+   }
 
-}
+
+

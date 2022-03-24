@@ -17,8 +17,9 @@ function createToDo(newToDo){
   return fetch(`${baseUrl}/todos`, {
     method: "POST",
     headers: {
-      'Content-Type': 'application/json' // ii spunem la server ca trimitem json
+      'Content-Type': 'application/json' 
     },
     body: JSON.stringify(newToDo)
   })
 }
+

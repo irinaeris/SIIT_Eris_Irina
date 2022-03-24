@@ -10,13 +10,28 @@ getTodos().then(function (todos) { // cod async
     for (let i = 0; i < todos.length; i++) {
       // console.log(todos[i])
       const itemHTML = createTodo(todos[i].name, todos[i].id);
-  
+
+
       const deleteBtn = getDeleteButton(todos[i].id)
      itemHTML.appendChild(deleteBtn);
 
      const updateBtn = updateTodo(todos[i].id)
-     itemHTML.appendChild(updateBtn)
-  
+     itemHTML.appendChild(updateBtn);
+
+     updateBtn.addEventListener("change", function(){
+
+         var inputName = todos[i].name
+         //console.log(inputName)
+         var updateInputName = toDoInput.value
+         //console.log(updateInputName)
+         var inputName = updateInputName
+         console.log(inputName)
+         todos[i].name = inputName
+         //console.log(todos[i].name)
+         itemHTML.innerText = todos[i].name
+     })
+    
+
       ulHTML.appendChild(itemHTML);
     }
     document.body.appendChild(ulHTML)
