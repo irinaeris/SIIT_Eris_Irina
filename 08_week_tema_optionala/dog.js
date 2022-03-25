@@ -1,5 +1,15 @@
 
 
+
+function getSelectedDropdownValue(){
+
+            selectElement = document.getElementById("select1");
+            output = selectElement.value;
+            document.querySelector(".output").textContent = output;
+            //var selectedText = availableValues.options[availableValues.selectedIndex].innerHtml;
+            //var selectedValue = availableValues.value;
+            //console.log(selectedValue)
+        }
 /*function getRandomDogs(){
 
  url = "https://random.dog/woof.json"

@@ -12,17 +12,21 @@
 <div id="section">
 
     <p> Select an animal
-        <select id="select1">
-            <option value="dog">Dog</option>
-            <option value="cat">Cat</option>
-            <option value="fox">Fox</option>
+        <select id="select1" onchange="getSelectedDropdownValue()">
+            <option value="Dog">Dog</option>
+            <option value="Cat">Cat</option>
+            <option value="Fox">Fox</option>
         </select>
+    </p>
 
-
+    <p> The value of the option selected is:
+        <span class="output"></span>
     </p>
 
     <img id="image"/>
-    <button id="button" onclick="getRandomCats()">Random</button>
+
+    <button id="button" >GetPhoto</button>
+
 </div>
 
    
