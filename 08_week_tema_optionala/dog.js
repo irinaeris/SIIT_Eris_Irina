@@ -1,15 +1,75 @@
+let output;
+function getSelectedDropdownValue() {
+  selectElement = document.getElementById("select1");
+  let output = selectElement.value;
+  console.log(output);
+  document.querySelector(".output").textContent = output;
+}
 
+function getRandomImage() {
+  if (output === "Dog") {
+    function getRandomDogs() {
+      url = "https://random.dog/woof.json";
 
+      fetch(url)
+        .then(function (response) {
+          //console.log(response);
+          return response.json();
+        })
+        .then(function (data) {
+          //console.log(data);
+          displayImageDog(data.url);
+        });
+    }
 
-function getSelectedDropdownValue(){
+    getRandomDogs();
 
-            selectElement = document.getElementById("select1");
-            output = selectElement.value;
-            document.querySelector(".output").textContent = output;
-            //var selectedText = availableValues.options[availableValues.selectedIndex].innerHtml;
-            //var selectedValue = availableValues.value;
-            //console.log(selectedValue)
-        }
+    function displayImageDog(image) {
+      document.getElementById("image").src = image;
+    }
+  } else if (output === "Cat") {
+    function getRandomCats() {
+      url = "https://aws.random.cat/meow";
+
+      fetch(url)
+        .then(function (response) {
+          //console.log(response);
+          return response.json();
+        })
+        .then(function (data) {
+          //console.log(data);
+          displayImageCat(data.file);
+        });
+    }
+
+    getRandomCats();
+
+    function displayImageCat(image) {
+      document.getElementById("image").src = image;
+    }
+  } else {
+    function getRandomFox() {
+      url = "https://randomfox.ca/floof/";
+
+      fetch(url)
+        .then(function (response) {
+          //console.log(response);
+          return response.json();
+        })
+        .then(function (data) {
+          //console.log(data);
+          displayImageFox(data.image);
+        });
+    }
+
+    getRandomFox();
+
+    function displayImageFox(imageFox) {
+      document.getElementById("image").src = imageFox;
+    }
+  }
+}
+
 /*function getRandomDogs(){
 
  url = "https://random.dog/woof.json"
@@ -31,7 +91,7 @@ getRandomDogs();
 function displayImageDog(image){
   document.getElementById("image").src = image
 
-}*/
+}
 
 
 function getRandomCats(){
@@ -78,4 +138,4 @@ function getRandomCats(){
    function displayImageFox(imageFox){
      document.getElementById("image").src = imageFox
    
-   }
+   }*/

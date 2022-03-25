@@ -26,7 +26,8 @@ body{
     width:150px;
     height:40px;
     border:none;
-    margin-left: 250px;
+    margin-left: 100px;
+    margin-top:15;
     background-color: grey;
     border-radius: 10px;
 }
