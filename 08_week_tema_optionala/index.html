@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div id="section">
+
+    <p> Select an animal
+        <select id="select1" onchange="getSelectedDropdownValue()">
+            <option value="Dog">Dog</option>
+            <option value="Cat">Cat</option>
+            <option value="Fox">Fox</option>
+        </select>
+    </p>
+
+    <p> The animal selected is: 
+        <span class="output"></span>
+    </p>
+
+    <img id="image"/>
+
+    <button id="button" onclick="getSelectedDropdownValue()">Get Photo</button>
+
+</div>
+
+   
+  <script src="./dog.js"></script>
+  
+</body>
+</html>

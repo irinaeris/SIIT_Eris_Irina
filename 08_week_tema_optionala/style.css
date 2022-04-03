@@ -1,0 +1,33 @@
+body{
+
+    background-color: lightgrey;
+    display:flex;
+    justify-content: center;
+}
+
+#section{
+
+    width:50%;
+    height:580px;
+    background-color: lightpink;
+}
+
+#image{
+
+    width: 60%;
+    height:60%;
+    border:5px solid black;
+    box-sizing: border-box;
+
+}
+
+#button{
+
+    width:150px;
+    height:40px;
+    border:none;
+    margin-left: 100px;
+    margin-top:15;
+    background-color: grey;
+    border-radius: 10px;
+}
