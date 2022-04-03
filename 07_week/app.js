@@ -17,12 +17,11 @@ let startBtn = document.getElementById("startButton");
 let resetButton = document.getElementById("resetButton");
 let saveButton = document.getElementById("saveButton");
 
-let secunde = 0;
-let minute = 0;
-let hour = 0;
-let intervalId;
-
 startBtn.addEventListener("click", function () {
+  let secunde = parseInt(secundeHtml.innerText);
+  let minute = parseInt(minuteHtml.innerText);
+  let hour = parseInt(hourHtml.innerText);
+
   intervalId = setInterval(function () {
     secunde = secunde + 1;
 
@@ -47,21 +46,22 @@ function myStop() {
 }
 
 resetButton.addEventListener("click", function () {
+  clearInterval(intervalId);
   hourHtml.innerHTML = "00";
   minuteHtml.innerHTML = "00";
   secundeHtml.innerHTML = "00";
 });
 
 saveButton.onclick = function () {
-  const valuesHour = document.getElementById("hour");
-  const clone = valuesHour.cloneNode(true);
-  document.body.appendChild(clone);
+  let secunde = parseInt(secundeHtml.innerText);
+  let minute = parseInt(minuteHtml.innerText);
+  let hour = parseInt(hourHtml.innerText);
 
-  const valuesMinutes = document.getElementById("minute");
-  const clone2 = valuesMinutes.cloneNode(true);
-  document.body.appendChild(clone2);
-
-  const valuesSeconds = document.getElementById("secunde");
-  const clone3 = valuesSeconds.cloneNode(true);
-  document.body.appendChild(clone3);
+  const secondDisplay = document.getElementById("second_display");
+  secondDisplay.innerHTML = `<span id="hour">${addZero(
+    hour
+  )}</span> : <span id="minute">${addZero(minute)}</span> :
+    <span id="second">${addZero(secunde)}</span>
+  `;
+  body.div.appendChiled(secondDisplay);
 };
