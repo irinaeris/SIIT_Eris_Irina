@@ -4,6 +4,8 @@ function getSelectedDropdownValue() {
   let output = selectElement.value;
   console.log(output);
   document.querySelector(".output").textContent = output;
+
+
 }
 
 function getRandomImage() {
